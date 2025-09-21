@@ -1,0 +1,19 @@
+name: FemboyPlugin
+version: 1.0
+main: com.femboy.plugin.FemboyPlugin
+api-version: 1.21
+
+commands:
+  hello:
+    description: Says hello in chat
+    usage: /hello
+  givecustomitem:
+    description: Gives a custom item
+    usage: /givecustomitem <item> [amount]
+  givegui:
+    description: Opens the custom item GUI
+    usage: /givegui
+  report:
+    description: Report a player or an issue to staff via Discord
+    usage: /report <player|issue> <message>
+    aliases: [reports, ticket]

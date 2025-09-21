@@ -1,0 +1,45 @@
+# FemboyPlugin Configuration
+
+# Discord Integration Settings
+discord:
+  # Discord webhook URL for sending reports
+  # To get a webhook URL:
+  # 1. Go to your Discord server
+  # 2. Right-click on the channel where you want reports
+  # 3. Edit Channel > Integrations > Webhooks > New Webhook
+  # 4. Copy the webhook URL and paste it here
+  webhook_url: "CHANGE_ME"
+  
+  # Bot username that will appear in Discord (optional)
+  bot_name: "Server Reports"
+  
+  # Bot avatar URL (optional)
+  bot_avatar: "https://i.imgur.com/4M34hi2.png"
+
+# Report System Settings
+reports:
+  # Cooldown time in seconds between reports from the same player
+  cooldown_seconds: 300
+  
+  # Maximum length of a report message
+  max_message_length: 500
+  
+  # Whether to log reports to server console
+  log_to_console: true
+  
+  # Whether to store reports in a local file
+  store_locally: true
+
+# Messages (you can customize these)
+messages:
+  # Success messages
+  report_sent: "&aYour report has been sent to the staff team!"
+  
+  # Error messages
+  cooldown: "&cYou must wait %time% seconds before sending another report."
+  no_message: "&cUsage: /report <player|issue> <message>"
+  message_too_long: "&cYour report message is too long! Maximum length is %max% characters."
+  webhook_not_configured: "&cReports are currently disabled. Please contact an administrator."
+  
+  # Discord webhook failed
+  webhook_error: "&cFailed to send report. Please try again later or contact staff directly."
