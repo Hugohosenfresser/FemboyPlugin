@@ -2,6 +2,8 @@
 
 A comprehensive Minecraft plugin with custom items and a Discord-integrated report system.
 
+> **Version**: 1.0.0 | **Minecraft**: 1.21+ | **Java**: 17+
+
 ## Features
 
 ### Custom Items
