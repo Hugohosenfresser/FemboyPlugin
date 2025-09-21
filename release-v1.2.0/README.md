@@ -4,16 +4,16 @@ A comprehensive Minecraft plugin featuring custom items, Discord bot integration
 
 > **Version**: 1.2.0 | **Minecraft**: 1.21+ | **Java**: 17+
 
-## ✨ Features
+## Features
 
-### 🗡️ Custom Items System
+### Custom Items System
 - **Cock Slicer**: Powerful sword with special combat effects
 - **Bandage**: Quick healing item for health restoration  
 - **Medkit**: Advanced healing item with greater restoration power
 - **Interactive GUI**: User-friendly interface for item management
 - **Admin Commands**: Easy item distribution and management
 
-### 🤖 Discord Bot Integration
+### Discord Bot Integration
 - **Full Discord Bot**: JDA-powered bot with real-time connection
 - **Comprehensive Event Logging**: Track all server activities
 - **Multiple Channel Support**: Route different events to different channels
@@ -21,14 +21,14 @@ A comprehensive Minecraft plugin featuring custom items, Discord bot integration
 - **Real-time Notifications**: Instant Discord alerts for server events
 - **Admin Management**: In-game commands to control Discord integration
 
-### 📊 Advanced Logging
+### Advanced Logging
 - **Player Events**: Join/leave, deaths, world changes, achievements
 - **Command Logging**: Track all command usage (configurable)
 - **Admin Actions**: Log item giving, permissions, and admin activities
 - **Chat Monitoring**: Optional player chat logging (privacy-friendly defaults)
 - **Server Alerts**: Performance monitoring and system notifications
 
-### 📝 Report System
+### Report System
 - **Dual Integration**: Both Discord webhooks AND bot support
 - **Player Reports**: Report problematic players with detailed reasons
 - **Issue Reports**: Report server bugs and technical problems
@@ -37,7 +37,7 @@ A comprehensive Minecraft plugin featuring custom items, Discord bot integration
 - **Local Backup**: Automatic storage of all reports in YAML format
 - **Tab Completion**: Smart autocomplete for enhanced user experience
 
-## 🎮 Commands
+## Commands
 
 ### Core Commands
 - `/givecustomitem <item> [amount]` - Give custom items to players
@@ -49,7 +49,7 @@ A comprehensive Minecraft plugin featuring custom items, Discord bot integration
 - `/report issue <description>` - Report server issues or bugs
 - **Aliases**: `/reports`, `/ticket`
 
-### Discord Bot Management ⚙️
+### Discord Bot Management
 - `/discord status` - Check Discord bot connection and status
 - `/discord reload` - Reload Discord bot configuration
 - `/discord test <channel>` - Test Discord bot connection to specific channels
@@ -61,7 +61,7 @@ A comprehensive Minecraft plugin featuring custom items, Discord bot integration
 ### Help System
 - `/help` or `/pluginhelp` - Alternative aliases for `/commands`
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Installation
 1. Download `FemboyPlugin-v1.2.0.jar` from releases
@@ -70,7 +70,7 @@ A comprehensive Minecraft plugin featuring custom items, Discord bot integration
 4. Configure Discord integration (optional)
 5. Enjoy the enhanced server experience!
 
-### Discord Bot Setup (Recommended) 🤖
+### Discord Bot Setup (Recommended)
 
 For full Discord integration with advanced logging:
 
@@ -91,7 +91,7 @@ For full Discord integration with advanced logging:
    - Right-click channels and "Copy ID"
    - Add channel IDs to your config
 
-**📄 For detailed setup instructions, see [DISCORD_SETUP.md](DISCORD_SETUP.md)**
+**For detailed setup instructions, see [DISCORD_SETUP.md](DISCORD_SETUP.md)**
 
 ### Legacy Webhook Setup (Alternative)
 
@@ -106,7 +106,7 @@ For basic Discord reporting without a bot:
      webhook_url: "YOUR_WEBHOOK_URL_HERE"
    ```
 
-## 🔐 Permissions
+## Permissions
 
 The plugin uses a fully configurable permission system compatible with any permission plugin:
 
@@ -116,7 +116,7 @@ The plugin uses a fully configurable permission system compatible with any permi
 - `femboyplugin.report` - Use /report commands (**everyone**)
 - `femboyplugin.commands` - Use /commands help (**everyone**)
 - `femboyplugin.admin` - Admin permissions (**op only**)
-- `femboyplugin.discord` - Use /discord commands (**op only**) 🆕
+- `femboyplugin.discord` - Use /discord commands (**op only**)
 - `femboyplugin.*` - All plugin permissions
 
 ### Permission Configuration
@@ -130,7 +130,7 @@ permissions:
   no_permission: "&cYou don't have permission to use this command!"
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Core Configuration
 Edit `plugins/FemboyPlugin/config.yml`:
@@ -194,43 +194,43 @@ reports:
   store_locally: true              # Local YAML storage
 ```
 
-## 💻 Requirements
+## Requirements
 
 - **Minecraft Server**: 1.21+ (Paper/Spigot/Bukkit)
 - **Java**: 17+
 - **Dependencies**: Automatically downloaded (JDA, OkHttp)
 - **Optional**: Discord server for bot integration
 
-## 🔍 What's New in v1.2.0
+## What's New in v1.2.0
 
-🆕 **Major Discord Bot Integration**
+**Major Discord Bot Integration**
 - Full JDA-powered Discord bot with real-time connection
 - Comprehensive server event logging to Discord
 - Admin commands for Discord bot management
 - Multiple channel support with configurable routing
 - Privacy-friendly defaults with granular event controls
 
-## 🛠️ Building
+## Building
 
 ```bash
 mvn clean package
 ```
 
-## 📄 Documentation
+## Documentation
 
 - **Discord Setup**: [DISCORD_SETUP.md](DISCORD_SETUP.md) - Complete Discord bot setup guide
 - **Report System**: [REPORT_SYSTEM.md](REPORT_SYSTEM.md) - Detailed reporting documentation
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md) - Version history and changes
 
-## 💬 Support
+## Support
 
 Need help? Check out our documentation or create an issue!
 
-1. 📄 Review the setup guides in the documentation files
-2. 🔍 Check server console for error messages
-3. ⚙️ Verify your Discord bot token and channel IDs
-4. 📝 Create a GitHub issue with details
+1. Review the setup guides in the documentation files
+2. Check server console for error messages
+3. Verify your Discord bot token and channel IDs
+4. Create a GitHub issue with error details
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.

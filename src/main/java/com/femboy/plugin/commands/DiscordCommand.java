@@ -117,7 +117,7 @@ public class DiscordCommand implements CommandExecutor, TabCompleter {
             return;
         }
         
-        String testMessage = String.format("🧪 **Test Message**\n" +
+        String testMessage = String.format("**Test Message**\\n" +
                 "**Sender:** %s\n" +
                 "**Channel Type:** %s\n" +
                 "**Server:** %s\n" +

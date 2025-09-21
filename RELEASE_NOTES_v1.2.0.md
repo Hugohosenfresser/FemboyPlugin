@@ -1,20 +1,20 @@
 # FemboyPlugin v1.2.0 Release Notes
 
-## 🤖 Discord Bot Integration Release
+## Discord Bot Integration Release
 
 This major release introduces comprehensive Discord bot integration, transforming FemboyPlugin into a complete server monitoring and management solution.
 
 ---
 
-## 🌟 What's New
+## What's New
 
-### 🤖 Full Discord Bot Integration
+### Full Discord Bot Integration
 - **JDA-Powered Bot**: Real-time Discord bot connection with advanced features
 - **Multi-Channel Logging**: Route different events to separate Discord channels
 - **Admin Commands**: Manage Discord integration directly from your Minecraft server
 - **Real-time Notifications**: Instant Discord alerts for all server activities
 
-### 📊 Comprehensive Server Monitoring
+### Comprehensive Server Monitoring
 - **Player Activity**: Join/leave events with detailed information
 - **Command Tracking**: Monitor command usage across your server
 - **Admin Actions**: Track administrative activities and item giving
@@ -23,7 +23,7 @@ This major release introduces comprehensive Discord bot integration, transformin
 - **Achievement Tracking**: Optional player advancement notifications
 - **Performance Alerts**: Server health and performance monitoring
 
-### 🎛️ Advanced Management
+### Advanced Management
 - **In-Game Controls**: Manage Discord bot without leaving Minecraft
 - **Event Toggles**: Enable/disable specific logging types on demand
 - **Channel Testing**: Test Discord connections to verify setup
@@ -32,7 +32,7 @@ This major release introduces comprehensive Discord bot integration, transformin
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Download & Install
 ```bash
@@ -71,7 +71,7 @@ For full Discord integration:
 
 ---
 
-## 🎮 New Commands
+## New Commands
 
 ### Discord Bot Management
 - `/discord status` - Check bot connection and status
@@ -88,7 +88,7 @@ For full Discord integration:
 
 ---
 
-## ⚙️ Configuration Overview
+## Configuration Overview
 
 ### Discord Bot Settings
 ```yaml
@@ -130,7 +130,7 @@ discord_bot:
 
 ---
 
-## 🔐 Permissions
+## Permissions
 
 ### New Permission
 - `femboyplugin.discord` - Discord bot management commands (op only)
@@ -145,7 +145,7 @@ discord_bot:
 
 ---
 
-## 🛡️ Privacy & Security
+## Privacy & Security
 
 ### Privacy-Friendly Defaults
 - **Chat logging disabled** by default
@@ -161,7 +161,7 @@ discord_bot:
 
 ---
 
-## 🔄 Backward Compatibility
+## Backward Compatibility
 
 ### Existing Users
 - **No breaking changes** - all existing functionality preserved
@@ -177,7 +177,7 @@ discord_bot:
 
 ---
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Dependencies (Auto-Downloaded)
 - **JDA**: 5.0.0-beta.21 (Discord bot library)
@@ -197,7 +197,7 @@ discord_bot:
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 ### Setup Guides
 - **[DISCORD_SETUP.md](DISCORD_SETUP.md)** - Complete Discord bot setup
@@ -212,7 +212,7 @@ discord_bot:
 
 ---
 
-## 🐛 Known Issues & Limitations
+## Known Issues & Limitations
 
 ### Minor Limitations
 - Discord bot requires Java 17+ (server requirement)
@@ -227,7 +227,7 @@ discord_bot:
 
 ---
 
-## 🔮 Future Roadmap
+## Future Roadmap
 
 ### Planned Features
 - **Custom Discord commands** - trigger Minecraft commands from Discord
@@ -238,7 +238,7 @@ discord_bot:
 
 ---
 
-## 📦 Download & Installation
+## Download & Installation
 
 ### Files Included
 - `FemboyPlugin-v1.2.0.jar` - Main plugin file (~50KB)
@@ -257,7 +257,7 @@ discord_bot:
 
 ---
 
-## 🤝 Support
+## Support
 
 ### Getting Help
 1. **Check documentation** - comprehensive guides included
@@ -272,7 +272,7 @@ discord_bot:
 
 ---
 
-**Happy server monitoring! 🎮**
+**Happy server monitoring!**
 
 ---
 

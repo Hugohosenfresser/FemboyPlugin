@@ -29,7 +29,7 @@ public class EventLogger {
         String timestamp = getCurrentTimestamp();
         String argsString = args.length > 0 ? String.join(" ", args) : "no arguments";
         
-        String message = String.format("🎮 **Command Used**\n" +
+        String message = String.format("**Command Used**\\n" +
                 "**Player:** %s\n" +
                 "**Command:** /%s\n" +
                 "**Arguments:** %s\n" +
@@ -54,7 +54,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("⚔️ **Admin Action**\n" +
+        String message = String.format("**Admin Action**\\n" +
                 "**Admin:** %s\n" +
                 "**Action:** %s\n" +
                 "**Details:** %s\n" +
@@ -79,7 +79,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("✅ **Player Joined**\n" +
+        String message = String.format("**Player Joined**\\n" +
                 "**Player:** %s\n" +
                 "**IP:** %s\n" +
                 "**Online Players:** %d/%d\n" +
@@ -105,7 +105,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("❌ **Player Left**\n" +
+        String message = String.format("**Player Left**\\n" +
                 "**Player:** %s\n" +
                 "**Reason:** %s\n" +
                 "**Online Players:** %d/%d\n" +
@@ -131,7 +131,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("📝 **Report Submitted**\n" +
+        String message = String.format("**Report Submitted**\\n" +
                 "**Reporter:** %s\n" +
                 "**Type:** %s\n" +
                 "**Details:** %s\n" +
@@ -156,7 +156,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("🚫 **Permission Denied**\n" +
+        String message = String.format("**Permission Denied**\\n" +
                 "**Player:** %s\n" +
                 "**Command:** /%s\n" +
                 "**Required Permission:** %s\n" +
@@ -181,7 +181,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("🔌 **Plugin Event**\n" +
+        String message = String.format("**Plugin Event**\\n" +
                 "**Event:** %s\n" +
                 "**Details:** %s\n" +
                 "**Server:** %s\n" +
@@ -206,7 +206,7 @@ public class EventLogger {
         
         String timestamp = getCurrentTimestamp();
         
-        String message = String.format("🎁 **Item Usage**\n" +
+        String message = String.format("**Item Usage**\\n" +
                 "**Player:** %s\n" +
                 "**Item:** %s\n" +
                 "**Action:** %s\n" +

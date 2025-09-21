@@ -2,14 +2,14 @@
 
 ## Version 1.2.0 (Latest Release) - Discord Bot Integration
 
-### 🤖 Major New Features
+### Major New Features
 - **Full Discord Bot Integration**: Complete JDA-powered Discord bot with real-time connection
 - **Comprehensive Event Logging**: Track all server activities with configurable event types
 - **Multiple Channel Support**: Route different event types to different Discord channels
 - **Advanced Admin Management**: In-game commands to control Discord bot functionality
 - **Privacy-Friendly Defaults**: Sensible defaults with chat logging disabled by default
 
-### 📊 Event Logging System
+### Event Logging System
 - **Player Events**: Join/leave notifications with IP addresses and player counts
 - **Command Logging**: Track command usage (plugin commands or all server commands)
 - **Admin Actions**: Log item giving, permissions, and administrative activities
@@ -19,7 +19,7 @@
 - **Achievement Tracking**: Player advancement/achievement unlocks (optional)
 - **Server Alerts**: Performance monitoring and system notifications
 
-### 🎛️ New Admin Commands
+### New Admin Commands
 - `/discord status` - Check Discord bot connection and status information
 - `/discord reload` - Reload Discord bot configuration without server restart
 - `/discord test <channel>` - Test Discord bot connection to specific channels
@@ -28,30 +28,30 @@
 - `/discord events` - View current event logging configuration status
 - Command aliases: `/discordbot`
 
-### ⚙️ Configuration Enhancements
+### Configuration Enhancements
 - **Discord Bot Settings**: Complete bot configuration section in config.yml
 - **Channel Mapping**: Map different event types to different Discord channels
 - **Granular Event Controls**: Enable/disable individual event types
 - **Performance Settings**: Configurable logging options for optimal server performance
 - **Dual Discord Support**: Both webhook and bot integration supported simultaneously
 
-### 🔒 New Permissions
+### New Permissions
 - `femboyplugin.discord` - Access to Discord bot admin commands (default: op only)
 - Enhanced permission system integration for Discord management
 
-### 🛠️ Technical Improvements
+### Technical Improvements
 - **Asynchronous Operations**: All Discord operations run asynchronously to prevent server lag
 - **Enhanced Error Handling**: Robust error handling with detailed logging
 - **Auto-Dependency Management**: JDA and OkHttp dependencies automatically downloaded
 - **Graceful Degradation**: Plugin functions normally even if Discord integration fails
 - **Memory Optimization**: Efficient event processing with minimal memory footprint
 
-### 📚 Documentation Updates
+### Documentation Updates
 - **DISCORD_SETUP.md**: Complete Discord bot setup guide
 - **Updated README.md**: Comprehensive documentation with Discord integration
 - **Enhanced Configuration Examples**: Detailed config.yml examples with comments
 
-### 🔧 Compatibility
+### Compatibility
 - **Backward Compatible**: All existing webhook functionality preserved
 - **Configuration Migration**: Existing configurations work without changes
 - **Permission System**: Compatible with all major permission plugins

@@ -2,7 +2,7 @@
 
 The FemboyPlugin includes a comprehensive report system with dual Discord integration, allowing players to report issues through both webhooks and a full Discord bot.
 
-## 🎆 Features (Updated for v1.2.0)
+## Features (Updated for v1.2.0)
 
 - **Player Reports**: Report problematic players with detailed reasons
 - **Issue Reports**: Report bugs, server issues, or general problems
@@ -15,9 +15,9 @@ The FemboyPlugin includes a comprehensive report system with dual Discord integr
 - **Rich Formatting**: Beautiful Discord embeds with timestamps and metadata
 - **Admin Management**: In-game Discord bot controls for report monitoring
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
-### 🤖 Option 1: Discord Bot Setup (Recommended)
+### Option 1: Discord Bot Setup (Recommended)
 
 **New in v1.2.0** - Full Discord bot integration with enhanced features:
 
@@ -49,9 +49,9 @@ The FemboyPlugin includes a comprehensive report system with dual Discord integr
    /discord test reports # Test reports channel
    ```
 
-**📄 Complete setup guide: [DISCORD_SETUP.md](DISCORD_SETUP.md)**
+**Complete setup guide: [DISCORD_SETUP.md](DISCORD_SETUP.md)**
 
-### 🔗 Option 2: Webhook Setup (Legacy)
+### Option 2: Webhook Setup (Legacy)
 
 For basic Discord reporting without a bot:
 
@@ -131,7 +131,7 @@ Use the built-in help command to see all available commands:
 
 This displays all plugin commands with their descriptions, usage examples, and required permissions.
 
-## 🤖 Discord Integration (Enhanced in v1.2.0)
+## Discord Integration (Enhanced in v1.2.0)
 
 ### Discord Bot Features
 **New in v1.2.0** - Full bot integration with advanced features:
@@ -205,7 +205,7 @@ permissions:
   no_permission: "&cNo permission!" # Custom no-permission message
 ```
 
-### Discord Bot Management 🤖
+### Discord Bot Management
 **New in v1.2.0** - Admin commands for managing Discord report logging:
 
 ```bash
@@ -252,7 +252,7 @@ The system handles various error conditions:
 
 All errors are logged to the server console for debugging.
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Discord Bot Issues (v1.2.0)
 **Bot not connecting:**
@@ -295,7 +295,7 @@ All errors are logged to the server console for debugging.
 - Check your permission plugin settings
 - Use empty string ("") to disable permission checks
 
-## 📞 Support
+## Support
 
 ### Quick Diagnostics
 1. **Check Bot Status**: `/discord status`
@@ -305,9 +305,9 @@ All errors are logged to the server console for debugging.
 
 ### Getting Help
 If you encounter issues:
-1. 📄 Review [DISCORD_SETUP.md](DISCORD_SETUP.md) for setup guidance
-2. 🔍 Check server console for detailed error messages
-3. ⚙️ Verify all configuration settings in config.yml
-4. 🧪 Test Discord webhook URL manually (for webhook setup)
-5. 📦 Ensure all plugin dependencies are properly loaded
-6. 📝 Create a GitHub issue with error details and configuration
+1. Review [DISCORD_SETUP.md](DISCORD_SETUP.md) for setup guidance
+2. Check server console for detailed error messages
+3. Verify all configuration settings in config.yml
+4. Test Discord webhook URL manually (for webhook setup)
+5. Ensure all plugin dependencies are properly loaded
+6. Create a GitHub issue with error details and configuration

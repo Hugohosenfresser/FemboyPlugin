@@ -53,6 +53,17 @@ public class CommandsCommand implements CommandExecutor {
         sender.sendMessage(ChatColor.DARK_GRAY + "   Permission: " + plugin.getPermissionManager().getPermission("report"));
         sender.sendMessage("");
         
+        // Discord Bot Management Section
+        sender.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Discord Bot Management:");
+        sender.sendMessage(ChatColor.WHITE + "/discord status" + ChatColor.GRAY + " - Check Discord bot status");
+        sender.sendMessage(ChatColor.WHITE + "/discord reload" + ChatColor.GRAY + " - Reload bot configuration");
+        sender.sendMessage(ChatColor.WHITE + "/discord test <channel>" + ChatColor.GRAY + " - Test channel connection");
+        sender.sendMessage(ChatColor.WHITE + "/discord toggle <event>" + ChatColor.GRAY + " - Toggle event logging");
+        sender.sendMessage(ChatColor.WHITE + "/discord channels" + ChatColor.GRAY + " - List configured channels");
+        sender.sendMessage(ChatColor.WHITE + "/discord events" + ChatColor.GRAY + " - View logging status");
+        sender.sendMessage(ChatColor.DARK_GRAY + "   Permission: " + plugin.getPermissionManager().getPermission("discord"));
+        sender.sendMessage("");
+        
         // Help Section
         sender.sendMessage(ChatColor.BLUE + "" + ChatColor.BOLD + "Information:");
         sender.sendMessage(ChatColor.WHITE + "/commands" + ChatColor.GRAY + " - Show this help menu");
@@ -75,7 +86,7 @@ public class CommandsCommand implements CommandExecutor {
         
         // Footer
         sender.sendMessage(ChatColor.GOLD + "==========================================");
-        sender.sendMessage(ChatColor.YELLOW + "      Plugin Version: " + ChatColor.WHITE + "1.0.0");
+        sender.sendMessage(ChatColor.YELLOW + "      Plugin Version: " + ChatColor.WHITE + plugin.getDescription().getVersion());
         sender.sendMessage(ChatColor.GOLD + "==========================================");
     }
 }

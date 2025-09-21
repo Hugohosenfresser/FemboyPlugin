@@ -151,7 +151,7 @@ public class DiscordEventListener implements Listener {
     private void logPlayerDeath(Player player, String deathMessage) {
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             if (plugin.getDiscordBot().isConnected()) {
-                String message = String.format("💀 **Player Death**\n" +
+                String message = String.format("**Player Death**\n" +
                         "**Player:** %s\n" +
                         "**Death Message:** %s\n" +
                         "**Location:** %s\n" +
@@ -175,7 +175,7 @@ public class DiscordEventListener implements Listener {
     private void logPlayerChat(Player player, String chatMessage) {
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             if (plugin.getDiscordBot().isConnected()) {
-                String message = String.format("💬 **Player Chat**\n" +
+                String message = String.format("**Player Chat**\n" +
                         "**Player:** %s\n" +
                         "**Message:** %s\n" +
                         "**World:** %s\n" +
@@ -194,7 +194,7 @@ public class DiscordEventListener implements Listener {
     private void logWorldChange(Player player, String fromWorld, String toWorld) {
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             if (plugin.getDiscordBot().isConnected()) {
-                String message = String.format("🌍 **World Change**\n" +
+                String message = String.format("**World Change**\n" +
                         "**Player:** %s\n" +
                         "**From:** %s\n" +
                         "**To:** %s\n" +
@@ -213,7 +213,7 @@ public class DiscordEventListener implements Listener {
     private void logPlayerAdvancement(Player player, String advancement) {
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             if (plugin.getDiscordBot().isConnected()) {
-                String message = String.format("🏆 **Achievement Unlocked**\n" +
+                String message = String.format("**Achievement Unlocked**\n" +
                         "**Player:** %s\n" +
                         "**Achievement:** %s\n" +
                         "**World:** %s\n" +
