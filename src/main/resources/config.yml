@@ -1,5 +1,19 @@
 # FemboyPlugin Configuration
 
+# Permissions System
+permissions:
+  # Command permissions (set to "" to disable permission check)
+  givecustomitem: "femboyplugin.givecustomitem"
+  givegui: "femboyplugin.givegui"
+  report: "femboyplugin.report"
+  commands: "femboyplugin.commands"
+  
+  # Admin permissions
+  admin: "femboyplugin.admin"
+  
+  # Permission messages
+  no_permission: "&cYou don't have permission to use this command!"
+  
 # Discord Integration Settings
 discord:
   # Discord webhook URL for sending reports
@@ -15,6 +29,68 @@ discord:
   
   # Bot avatar URL (optional)
   bot_avatar: "https://i.imgur.com/4M34hi2.png"
+
+# Discord Bot Settings (separate from webhooks)
+discord_bot:
+  # Enable Discord bot functionality
+  enabled: false
+  
+  # Bot token from Discord Developer Portal
+  # 1. Go to https://discord.com/developers/applications
+  # 2. Create New Application > Bot > Copy Token
+  token: "CHANGE_ME"
+  
+  # Channel IDs for different types of logs
+  channels:
+    # General command usage logs
+    commands: "CHANGE_ME"
+    # Player join/leave events
+    player_events: "CHANGE_ME"
+    # Admin actions (giving items, etc.)
+    admin_actions: "CHANGE_ME"
+    # Reports (alternative to webhooks)
+    reports: "CHANGE_ME"
+    # General server events
+    general: "CHANGE_ME"
+    # Player chat messages
+    chat: "CHANGE_ME"
+    # Player deaths and PvP
+    deaths: "CHANGE_ME"
+    # Item usage and interactions
+    items: "CHANGE_ME"
+    # Server alerts (crashes, lag, etc.)
+    alerts: "CHANGE_ME"
+  
+  # Event logging toggles - set to false to disable specific event types
+  events:
+    # Log all command usage
+    log_commands: true
+    # Log player join/leave
+    log_player_events: true
+    # Log admin actions (givecustomitem, etc.)
+    log_admin_actions: true
+    # Log reports (in addition to webhooks)
+    log_reports: true
+    # Log plugin enable/disable
+    log_plugin_events: true
+    # Log permission denials
+    log_permission_denials: false
+    # Log player chat messages
+    log_chat: false
+    # Log player deaths and PvP
+    log_deaths: true
+    # Log custom item usage
+    log_item_usage: true
+    # Log world changes (dimension switching)
+    log_world_changes: true
+    # Log advancement/achievement unlocks
+    log_advancements: false
+    # Log server performance alerts
+    log_server_alerts: true
+    # Log all events (overrides individual settings)
+    log_all: false
+    # Log ALL commands from all plugins (not just FemboyPlugin commands)
+    log_all_commands: false
 
 # Report System Settings
 reports:

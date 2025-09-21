@@ -1,6 +1,7 @@
 package com.femboy.plugin.commands;
 
 import com.femboy.plugin.gui.ItemGUI;
+import com.femboy.plugin.FemboyPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,6 +17,11 @@ public class GiveGUICommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        // Check permission
+        if (!FemboyPlugin.getInstance().getPermissionManager().checkPermissionWithMessage(sender, "givegui")) {
+            return true;
+        }
+        
         if (!(sender instanceof Player player)) {
             sender.sendMessage(ChatColor.RED + "Only players can run this command.");
             return true;

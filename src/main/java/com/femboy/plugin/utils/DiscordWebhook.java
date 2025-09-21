@@ -57,7 +57,7 @@ public class DiscordWebhook {
     
     private String createPlayerReportEmbed(Player reporter, String reportedPlayer, String reason) {
         String timestamp = OffsetDateTime.now().format(DateTimeFormatter.ISO_INSTANT);
-        String serverName = Bukkit.getServerName();
+        String serverName = Bukkit.getServer().getName();
         
         return String.format("""
             {
@@ -108,7 +108,7 @@ public class DiscordWebhook {
     
     private String createIssueReportEmbed(Player reporter, String issue) {
         String timestamp = OffsetDateTime.now().format(DateTimeFormatter.ISO_INSTANT);
-        String serverName = Bukkit.getServerName();
+        String serverName = Bukkit.getServer().getName();
         
         return String.format("""
             {

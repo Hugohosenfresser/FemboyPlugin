@@ -1,7 +1,12 @@
 name: FemboyPlugin
-version: 1.0
+version: 1.2.0
 main: com.femboy.plugin.FemboyPlugin
 api-version: 1.21
+depend: []
+softdepend: []
+libraries:
+  - 'net.dv8tion:JDA:5.0.0-beta.21'
+  - 'com.squareup.okhttp3:okhttp:4.11.0'
 
 commands:
   hello:
@@ -17,3 +22,40 @@ commands:
     description: Report a player or an issue to staff via Discord
     usage: /report <player|issue> <message>
     aliases: [reports, ticket]
+  commands:
+    description: Display all available plugin commands
+    usage: /commands
+    aliases: [help, pluginhelp]
+  discord:
+    description: Discord bot administration commands
+    usage: /discord <status|reload|test|toggle|channels|events>
+    aliases: [discordbot]
+
+permissions:
+  femboyplugin.*:
+    description: Gives access to all FemboyPlugin commands
+    children:
+      femboyplugin.givecustomitem: true
+      femboyplugin.givegui: true
+      femboyplugin.report: true
+      femboyplugin.commands: true
+      femboyplugin.admin: true
+      femboyplugin.discord: true
+  femboyplugin.givecustomitem:
+    description: Allow using /givecustomitem command
+    default: op
+  femboyplugin.givegui:
+    description: Allow using /givegui command
+    default: true
+  femboyplugin.report:
+    description: Allow using /report command
+    default: true
+  femboyplugin.commands:
+    description: Allow using /commands command
+    default: true
+  femboyplugin.admin:
+    description: Admin permissions for FemboyPlugin
+    default: op
+  femboyplugin.discord:
+    description: Allow using /discord command
+    default: op

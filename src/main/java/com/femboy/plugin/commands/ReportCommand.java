@@ -45,6 +45,11 @@ public class ReportCommand implements CommandExecutor, TabCompleter {
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        // Check permission
+        if (!plugin.getPermissionManager().checkPermissionWithMessage(sender, "report")) {
+            return true;
+        }
+        
         if (!(sender instanceof Player player)) {
             sender.sendMessage(ChatColor.RED + "Only players can use this command.");
             return true;
@@ -124,6 +129,11 @@ public class ReportCommand implements CommandExecutor, TabCompleter {
                     if (plugin.getConfig().getBoolean("reports.store_locally", true)) {
                         reportStorage.storePlayerReport(reporter.getName(), reportedPlayer, reason);
                     }
+                    
+                    // Log to Discord bot if available
+                    if (plugin.getEventLogger() != null) {
+                        plugin.getEventLogger().logReport(reporter, "PLAYER", "Reported: " + reportedPlayer + " - Reason: " + reason);
+                    }
                 } else {
                     reporter.sendMessage(getColoredMessage("messages.webhook_error"));
                 }
@@ -147,6 +157,11 @@ public class ReportCommand implements CommandExecutor, TabCompleter {
                     // Store locally if enabled
                     if (plugin.getConfig().getBoolean("reports.store_locally", true)) {
                         reportStorage.storeIssueReport(reporter.getName(), issue);
+                    }
+                    
+                    // Log to Discord bot if available
+                    if (plugin.getEventLogger() != null) {
+                        plugin.getEventLogger().logReport(reporter, "ISSUE", issue);
                     }
                 } else {
                     reporter.sendMessage(getColoredMessage("messages.webhook_error"));

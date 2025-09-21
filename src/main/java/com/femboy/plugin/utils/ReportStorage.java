@@ -99,7 +99,7 @@ public class ReportStorage {
         
         // Limit results
         if (limit > 0 && reportKeys.size() > limit) {
-            reportKeys = reportKeys.subList(0, limit);
+            reportKeys = new ArrayList<>(reportKeys.subList(0, limit));
         }
         
         for (String reportId : reportKeys) {

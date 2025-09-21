@@ -1,6 +1,7 @@
 package com.femboy.plugin.commands;
 
 import com.femboy.plugin.items.ItemManager;
+import com.femboy.plugin.FemboyPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,6 +19,11 @@ public class GiveItemCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        // Check permission
+        if (!FemboyPlugin.getInstance().getPermissionManager().checkPermissionWithMessage(sender, "givecustomitem")) {
+            return true;
+        }
+        
         if (!(sender instanceof Player player)) {
             sender.sendMessage(ChatColor.RED + "Only players can run this command.");
             return true;
@@ -49,6 +55,12 @@ public class GiveItemCommand implements CommandExecutor, TabCompleter {
         item.setAmount(amount);
         player.getInventory().addItem(item);
         player.sendMessage(ChatColor.GREEN + "You Recieved: " + amount + "x " + key);
+        
+        // Log admin action to Discord
+        if (FemboyPlugin.getInstance().getEventLogger() != null) {
+            String details = String.format("Gave %dx %s to %s", amount, key, player.getName());
+            FemboyPlugin.getInstance().getEventLogger().logAdminAction(player, "Give Custom Item", details);
+        }
 
         return true;
     }
