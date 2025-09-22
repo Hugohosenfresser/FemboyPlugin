@@ -54,11 +54,20 @@ public class GiveItemCommand implements CommandExecutor, TabCompleter {
         ItemStack item = ItemManager.getItem(key).clone();
         item.setAmount(amount);
         player.getInventory().addItem(item);
-        player.sendMessage(ChatColor.GREEN + "You Recieved: " + amount + "x " + key);
+
+        String displayName;
+        if (item.hasItemMeta() && item.getItemMeta().hasDisplayName()) {
+            displayName = item.getItemMeta().getDisplayName();
+        } else {
+            displayName = ChatColor.WHITE + item.getType().name().toLowerCase().replace('_', ' ');
+        }
+        // Keep message green, only the item name colored
+        player.sendMessage(ChatColor.GREEN + "You Recieved: " + amount + "x " + displayName + ChatColor.RESET + ChatColor.GREEN);
         
         // Log admin action to Discord
         if (FemboyPlugin.getInstance().getEventLogger() != null) {
-            String details = String.format("Gave %dx %s to %s", amount, key, player.getName());
+            String cleanName = org.bukkit.ChatColor.stripColor(displayName);
+            String details = String.format("Gave %dx %s to %s", amount, cleanName, player.getName());
             FemboyPlugin.getInstance().getEventLogger().logAdminAction(player, "Give Custom Item", details);
         }
 

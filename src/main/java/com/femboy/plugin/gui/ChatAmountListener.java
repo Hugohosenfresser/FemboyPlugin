@@ -33,8 +33,15 @@ public class ChatAmountListener implements Listener {
 
         item.setAmount(amount);
         player.getInventory().addItem(item);
-        player.sendMessage(ChatColor.GREEN + "You received " + amount + "x " + item.getType());
 
+        String displayName;
+        if (item.hasItemMeta() && item.getItemMeta().hasDisplayName()) {
+            displayName = item.getItemMeta().getDisplayName();
+        } else {
+            displayName = ChatColor.WHITE + item.getType().name().toLowerCase().replace('_', ' ');
+        }
+        player.sendMessage(ChatColor.GREEN + "You received " + amount + "x " + displayName + ChatColor.RESET + ChatColor.GREEN);
+        
         GUIListener.pendingAmount.remove(player);
     }
 }

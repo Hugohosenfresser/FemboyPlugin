@@ -49,7 +49,7 @@ public class GUIListener implements Listener {
             itemName = clicked.getItemMeta().getDisplayName();
         }
 
-        player.sendMessage(ChatColor.GREEN + "Type the amount for " + itemName + " in chat:");
+        player.sendMessage(ChatColor.GREEN + "Type the amount for " + itemName + ChatColor.RESET + ChatColor.GREEN + " in chat:");
         pendingAmount.put(player, clicked);
 
         player.closeInventory();

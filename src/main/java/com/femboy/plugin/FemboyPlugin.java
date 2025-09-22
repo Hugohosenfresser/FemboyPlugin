@@ -18,11 +18,16 @@ import com.femboy.plugin.items.ItemManager;
 import com.femboy.plugin.items.CockSlicer;
 import com.femboy.plugin.items.Bandage;
 import com.femboy.plugin.items.Medkit;
+import com.femboy.plugin.items.GrapplingHook;
+import com.femboy.plugin.items.BanHammer;
+import com.femboy.plugin.items.RainbowHelmet;
+import com.femboy.plugin.items.RainbowHelmetManager;
 
 // Custom item events
 import com.femboy.plugin.events.CustomItemListener;
 import com.femboy.plugin.events.PlayerEventListener;
 import com.femboy.plugin.events.DiscordEventListener;
+import com.femboy.plugin.events.ChatBypassListener;
 
 // Utils
 import com.femboy.plugin.utils.PermissionManager;
@@ -36,6 +41,7 @@ public class FemboyPlugin extends JavaPlugin {
     private PermissionManager permissionManager;
     private DiscordBot discordBot;
     private EventLogger eventLogger;
+    private RainbowHelmetManager rainbowHelmetManager;
 
     @Override
     public void onEnable() {
@@ -88,6 +94,7 @@ public class FemboyPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ChatAmountListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerEventListener(this), this);
         getServer().getPluginManager().registerEvents(new DiscordEventListener(this), this);
+        getServer().getPluginManager().registerEvents(new ChatBypassListener(), this);
 
         // Set tab completer for givecustomitem command
         this.getCommand("givecustomitem").setTabCompleter(new GiveItemCommand());
@@ -96,6 +103,14 @@ public class FemboyPlugin extends JavaPlugin {
         ItemManager.registerItem(new CockSlicer());
         ItemManager.registerItem(new Bandage());
         ItemManager.registerItem(new Medkit());
+        ItemManager.registerItem(new com.femboy.plugin.items.RickrollStick());
+        ItemManager.registerItem(new GrapplingHook());
+        ItemManager.registerItem(new BanHammer());
+        ItemManager.registerItem(new RainbowHelmet());
+
+        // Start rainbow helmet animator
+        rainbowHelmetManager = new RainbowHelmetManager(this);
+        rainbowHelmetManager.start();
 
         getLogger().info("FemboyPlugin enabled with custom items and report system!");
     }
@@ -110,6 +125,11 @@ public class FemboyPlugin extends JavaPlugin {
         // Shutdown Discord bot
         if (discordBot != null) {
             discordBot.shutdown();
+        }
+        
+        // Stop managers
+        if (rainbowHelmetManager != null) {
+            rainbowHelmetManager.stop();
         }
         
         getLogger().info("FemboyPlugin disabled.");
